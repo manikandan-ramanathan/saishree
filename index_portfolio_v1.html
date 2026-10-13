@@ -1,0 +1,1836 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="The official portfolio of Saishri Prabhakaran — actor, model and classical dancer working across Tamil and Kannada cinema.">
+  <title>Saishri Prabhakaran — Actor & Artist</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f2eb;
+      --paper-deep: #eae6dc;
+      --ink: #20231e;
+      --muted: #6e7068;
+      --line: rgba(32, 35, 30, .18);
+      --green: #475847;
+      --green-dark: #303e31;
+      --accent: #b56e4c;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      scroll-behavior: smooth;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--paper);
+      line-height: 1.55;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      color: inherit;
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .shell {
+      width: min(100% - 64px, 1440px);
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      color: var(--muted);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .17em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 23px;
+      height: 1px;
+      background: var(--accent);
+      content: "";
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 5;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 84px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 1px solid var(--green);
+      border-radius: 50%;
+      color: var(--green);
+      font-family: var(--serif);
+      font-size: .88rem;
+      letter-spacing: -.06em;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      line-height: 1.15;
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .57rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 46px);
+    }
+
+    .main-nav a {
+      color: #4e504a;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      transition: color .2s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent);
+    }
+
+    .main-nav .nav-contact {
+      padding: 10px 17px;
+      border: 1px solid var(--green);
+      color: var(--green-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin: 5px 0;
+      background: var(--ink);
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: min(790px, calc(100svh - 84px));
+      grid-template-columns: 1.02fr .98fr;
+      align-items: stretch;
+      padding-top: 44px;
+      padding-bottom: 62px;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px clamp(30px, 7vw, 112px) 50px 0;
+    }
+
+    .hero h1 {
+      max-width: 690px;
+      margin: 25px 0 20px;
+      font-family: var(--serif);
+      font-size: clamp(3.6rem, 7.8vw, 7.4rem);
+      font-weight: 400;
+      letter-spacing: -.075em;
+      line-height: .91;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--green);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -.065em;
+    }
+
+    .hero-intro {
+      max-width: 410px;
+      margin: 8px 0 30px;
+      color: #62645d;
+      font-family: var(--serif);
+      font-size: clamp(1.08rem, 1.5vw, 1.3rem);
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 0 21px;
+      border: 1px solid var(--green-dark);
+      background: var(--green-dark);
+      color: #fffdf8;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: transparent;
+      color: var(--green-dark);
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--line);
+      padding: 5px 0;
+      color: var(--green-dark);
+      font-size: .74rem;
+      letter-spacing: .05em;
+    }
+
+    .arrow {
+      display: inline-block;
+      font-size: 1rem;
+      transition: transform .2s ease;
+    }
+
+    a:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 570px;
+      overflow: hidden;
+      background: #d8d9d2;
+    }
+
+    .hero-visual::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(18, 24, 19, .2), transparent 35%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 570px;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+
+    .hero-stamp {
+      position: absolute;
+      z-index: 1;
+      right: 22px;
+      bottom: 23px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: .63rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .hero-stamp::before {
+      width: 30px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+    }
+
+    .scroll-note {
+      position: absolute;
+      right: clamp(50px, 7vw, 102px);
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-size: .6rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .scroll-note::before {
+      width: 1px;
+      height: 28px;
+      background: var(--accent);
+      content: "";
+    }
+
+    .marquee {
+      overflow: hidden;
+      border-block: 1px solid var(--line);
+      background: var(--paper-deep);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      align-items: center;
+      gap: 32px;
+      padding: 17px 0;
+      color: var(--green-dark);
+      animation: drift 38s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    .marquee-track .dot {
+      color: var(--accent);
+      font-size: .72rem;
+      font-style: normal;
+    }
+
+    @keyframes drift {
+      to { transform: translateX(-50%); }
+    }
+
+    .section {
+      padding-block: clamp(82px, 11vw, 154px);
+      scroll-margin-top: 28px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      margin: 13px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      font-weight: 400;
+      letter-spacing: -.065em;
+      line-height: 1;
+    }
+
+    .section-heading h2 em {
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .section-heading > p {
+      max-width: 350px;
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: clamp(46px, 10vw, 150px);
+      align-items: start;
+    }
+
+    .story-aside {
+      position: sticky;
+      top: 40px;
+    }
+
+    .story-aside h2 {
+      max-width: 410px;
+      margin: 18px 0 27px;
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 4.6vw, 4.4rem);
+      font-weight: 400;
+      letter-spacing: -.065em;
+      line-height: 1.02;
+    }
+
+    .story-aside h2 em {
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .story-aside img {
+      width: min(100%, 390px);
+      max-height: 450px;
+      object-fit: cover;
+      object-position: center 28%;
+    }
+
+    .story-copy {
+      padding-top: 23px;
+    }
+
+    .story-copy p {
+      margin: 0 0 22px;
+      color: #5f625b;
+      font-family: var(--serif);
+      font-size: clamp(1.08rem, 1.55vw, 1.28rem);
+      line-height: 1.8;
+    }
+
+    .story-copy p:first-child::first-letter {
+      float: left;
+      margin: 8px 9px 0 0;
+      color: var(--green);
+      font-size: 3.7rem;
+      line-height: .75;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail {
+      padding: 20px 16px 21px 0;
+    }
+
+    .detail + .detail {
+      padding-left: 23px;
+      border-left: 1px solid var(--line);
+    }
+
+    .detail strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+    }
+
+    .detail span {
+      color: var(--muted);
+      font-size: .69rem;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .films-section {
+      background: var(--green-dark);
+      color: #f5f2eb;
+    }
+
+    .films-section .eyebrow,
+    .films-section .section-heading > p {
+      color: #c0c6b9;
+    }
+
+    .films-section .section-heading h2 em {
+      color: #c8a58f;
+    }
+
+    .films-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid rgba(245, 242, 235, .2);
+      background: rgba(245, 242, 235, .2);
+    }
+
+    .film-card {
+      display: flex;
+      min-height: 262px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: clamp(22px, 3vw, 36px);
+      background: var(--green-dark);
+      transition: background .25s ease;
+    }
+
+    .film-card:hover {
+      background: #3a4b3b;
+    }
+
+    .film-meta {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: #bdc3b6;
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .film-card h3 {
+      margin: auto 0 8px;
+      padding-top: 45px;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 400;
+      letter-spacing: -.04em;
+      line-height: 1.1;
+    }
+
+    .film-card p {
+      margin: 0;
+      color: #c0c6b9;
+      font-family: var(--serif);
+      font-size: .98rem;
+    }
+
+    .film-extra {
+      display: flex;
+      width: 100%;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 13px;
+      border-top: 1px solid rgba(245, 242, 235, .2);
+      color: #c0c6b9;
+      font-size: .69rem;
+    }
+
+    .film-extra a {
+      color: #f1c6a7;
+      white-space: nowrap;
+    }
+
+    .film-note {
+      margin: 20px 0 0;
+      color: #c0c6b9;
+      font-size: .7rem;
+    }
+
+    .maria-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 95px;
+      background: #ece8de;
+      color: var(--ink);
+    }
+
+    .maria-image {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      background: #d5d4cc;
+    }
+
+    .maria-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      object-position: center 28%;
+    }
+
+    .maria-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: clamp(32px, 6vw, 76px);
+    }
+
+    .maria-copy h3 {
+      margin: 18px 0 14px;
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5vw, 5.4rem);
+      font-weight: 400;
+      letter-spacing: -.07em;
+      line-height: .95;
+    }
+
+    .maria-copy > p:not(.eyebrow) {
+      max-width: 440px;
+      margin: 0 0 24px;
+      color: #62645d;
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      line-height: 1.65;
+    }
+
+    .maria-copy > .maria-release-note {
+      margin-top: -12px;
+      font-family: var(--sans);
+      font-size: .72rem;
+      line-height: 1.6;
+    }
+
+    .maria-facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 26px;
+    }
+
+    .maria-facts span {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      color: #565950;
+      font-size: .62rem;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .maria-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .campaigns-section {
+      background: var(--paper-deep);
+    }
+
+    .campaign-feature {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      min-height: 330px;
+      margin-bottom: 34px;
+      background: var(--green);
+      color: #f5f2eb;
+    }
+
+    .campaign-feature-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: clamp(28px, 5vw, 62px);
+    }
+
+    .campaign-feature-copy .eyebrow {
+      color: #d0d3c6;
+    }
+
+    .campaign-feature-copy h3 {
+      margin: 16px 0 12px;
+      font-family: var(--serif);
+      font-size: clamp(2.1rem, 3.6vw, 3.7rem);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: 1.02;
+    }
+
+    .campaign-feature-copy > p:not(.eyebrow) {
+      max-width: 360px;
+      margin: 0;
+      color: #d0d3c6;
+      font-family: var(--serif);
+      font-size: 1rem;
+    }
+
+    .campaign-feature-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .campaign-feature-links button,
+    .campaign-card button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 11px;
+      border: 1px solid rgba(245, 242, 235, .45);
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      font-size: .65rem;
+      letter-spacing: .04em;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .campaign-feature-links button:hover {
+      background: #f5f2eb;
+      color: var(--green-dark);
+    }
+
+    .campaign-feature-visual {
+      position: relative;
+      min-height: 330px;
+      overflow: hidden;
+      background: #83877d;
+    }
+
+    .campaign-feature-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+      object-position: center 35%;
+      opacity: .82;
+    }
+
+    .campaign-feature-visual::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(48, 62, 49, .18), transparent 55%);
+      content: "";
+    }
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .campaign-card {
+      display: flex;
+      min-height: 190px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid var(--line);
+      background: rgba(245, 242, 235, .7);
+    }
+
+    .campaign-card > span {
+      color: var(--muted);
+      font-size: .58rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .campaign-card h3 {
+      margin: auto 0 7px;
+      padding-top: 23px;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .campaign-card p {
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: .72rem;
+    }
+
+    .campaign-card button {
+      margin-top: auto;
+      border-color: var(--line);
+      color: var(--green-dark);
+    }
+
+    .campaign-card button:hover {
+      background: var(--green-dark);
+      color: var(--paper);
+    }
+
+    .media-section {
+      background: var(--paper);
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: -17px 0 28px;
+    }
+
+    .filter-button {
+      padding: 9px 15px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: #55584f;
+      cursor: pointer;
+      font-size: .67rem;
+      letter-spacing: .06em;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .filter-button[aria-pressed="true"],
+    .filter-button:hover {
+      border-color: var(--green-dark);
+      background: var(--green-dark);
+      color: var(--paper);
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .media-card {
+      display: flex;
+      min-height: 192px;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 19px;
+      border: 1px solid var(--line);
+      background: #f9f7f2;
+      text-align: left;
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .media-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(71, 88, 71, .55);
+      background: #fffdf8;
+    }
+
+    .media-card[hidden] {
+      display: none;
+    }
+
+    .media-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: .57rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .play-mark {
+      display: grid;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--green);
+      font-size: .64rem;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .media-card:hover .play-mark {
+      background: var(--green);
+      color: white;
+    }
+
+    .media-card strong {
+      display: block;
+      margin: auto 0 6px;
+      padding-top: 24px;
+      font-family: var(--serif);
+      font-size: 1.22rem;
+      font-weight: 400;
+      line-height: 1.18;
+    }
+
+    .media-card small {
+      display: block;
+      color: var(--muted);
+      font-size: .68rem;
+      line-height: 1.45;
+    }
+
+    .media-outro {
+      margin-top: 22px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: .95rem;
+    }
+
+    .media-outro .text-link {
+      margin: 4px 12px 4px 0;
+      font-family: var(--sans);
+      font-size: .68rem;
+    }
+
+    .gallery-section {
+      padding-top: 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .gallery-item {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      padding: 0;
+      border: 0;
+      background: var(--paper-deep);
+      cursor: zoom-in;
+    }
+
+    .gallery-item:nth-child(2) {
+      margin-top: 78px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: clamp(340px, 54vw, 680px);
+      object-fit: cover;
+      transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .gallery-item:nth-child(2) img {
+      height: clamp(300px, 44vw, 550px);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.025);
+    }
+
+    .gallery-item span {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      left: 14px;
+      color: #fff;
+      font-size: .62rem;
+      letter-spacing: .12em;
+      text-align: left;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, .6);
+      text-transform: uppercase;
+    }
+
+    .connect-section {
+      padding-block: clamp(76px, 10vw, 130px);
+      background: #e7e4da;
+      text-align: center;
+    }
+
+    .connect-section .eyebrow {
+      justify-content: center;
+    }
+
+    .connect-section h2 {
+      margin: 19px 0 15px;
+      font-family: var(--serif);
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 400;
+      letter-spacing: -.075em;
+      line-height: .98;
+    }
+
+    .connect-section h2 em {
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .connect-section > .shell > p:not(.eyebrow) {
+      margin: 0 0 27px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 1.08rem;
+    }
+
+    .connect-section .button {
+      margin-inline: auto;
+    }
+
+    .site-footer {
+      padding-block: 23px;
+      background: var(--green-dark);
+      color: #e7e4da;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-inner p {
+      margin: 0;
+      color: #c0c6b9;
+      font-size: .63rem;
+      letter-spacing: .07em;
+    }
+
+    .footer-inner a {
+      color: #f1c6a7;
+      font-size: .68rem;
+    }
+
+    .video-dialog,
+    .image-dialog {
+      width: min(960px, calc(100% - 32px));
+      max-width: none;
+      max-height: calc(100% - 32px);
+      padding: 0;
+      overflow: visible;
+      border: 0;
+      background: #171a17;
+      color: white;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, .35);
+    }
+
+    .video-dialog::backdrop,
+    .image-dialog::backdrop {
+      background: rgba(19, 23, 19, .83);
+      backdrop-filter: blur(5px);
+    }
+
+    .dialog-top {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 16px 10px 20px;
+      color: #f5f2eb;
+    }
+
+    .dialog-top p {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1rem;
+    }
+
+    .dialog-close {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      place-items: center;
+      border: 1px solid rgba(245, 242, 235, .45);
+      border-radius: 50%;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .video-frame {
+      aspect-ratio: 16 / 9;
+      background: #090a09;
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .image-dialog {
+      width: auto;
+      max-width: min(90vw, 900px);
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .image-dialog .dialog-top {
+      padding-right: 0;
+    }
+
+    .image-dialog img {
+      max-width: 100%;
+      max-height: calc(100svh - 100px);
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 980px) {
+      .shell {
+        width: min(100% - 44px, 800px);
+      }
+
+      .hero {
+        min-height: 630px;
+        grid-template-columns: 1fr .92fr;
+      }
+
+      .hero-copy {
+        padding-right: 28px;
+      }
+
+      .hero-visual,
+      .hero-visual img {
+        min-height: 510px;
+      }
+
+      .story {
+        gap: 46px;
+      }
+
+      .films-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .campaign-grid,
+      .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .campaign-feature {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 36px, 560px);
+      }
+
+      .header-inner {
+        min-height: 70px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 18px;
+        border-bottom: 1px solid var(--line);
+        background: var(--paper);
+      }
+
+      .main-nav.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-nav a {
+        padding: 14px 4px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .main-nav .nav-contact {
+        margin-top: 12px;
+        border: 1px solid var(--green);
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 42px;
+        padding-bottom: 47px;
+      }
+
+      .hero-copy {
+        padding: 8px 0 0;
+      }
+
+      .hero h1 {
+        margin: 20px 0 12px;
+        font-size: clamp(3.8rem, 17vw, 6.7rem);
+      }
+
+      .hero-intro {
+        max-width: 440px;
+        margin: 8px 0 21px;
+      }
+
+      .hero-visual,
+      .hero-visual img {
+        min-height: 0;
+        height: min(118vw, 540px);
+      }
+
+      .hero-visual img {
+        object-position: center 27%;
+      }
+
+      .scroll-note {
+        display: none;
+      }
+
+      .section {
+        padding-block: 76px;
+      }
+
+      .section-heading {
+        display: block;
+        margin-bottom: 31px;
+      }
+
+      .section-heading > p {
+        margin-top: 19px;
+      }
+
+      .story {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .story-aside {
+        position: static;
+      }
+
+      .story-aside h2 {
+        max-width: 500px;
+      }
+
+      .story-aside img {
+        width: 100%;
+        max-height: 600px;
+      }
+
+      .story-copy {
+        padding-top: 0;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail,
+      .detail + .detail {
+        padding: 14px 0;
+        border: 0;
+      }
+
+      .detail + .detail {
+        border-top: 1px solid var(--line);
+      }
+
+      .films-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .film-card {
+        min-height: 225px;
+      }
+
+      .maria-feature {
+        grid-template-columns: 1fr;
+        margin-top: 55px;
+      }
+
+      .maria-image,
+      .maria-image img {
+        min-height: 0;
+        height: 115vw;
+        max-height: 550px;
+      }
+
+      .maria-copy {
+        padding: 31px 25px 35px;
+      }
+
+      .campaign-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .campaign-feature-visual {
+        grid-row: 1;
+        min-height: 0;
+        height: 76vw;
+        max-height: 430px;
+      }
+
+      .campaign-feature-visual img {
+        min-height: 0;
+        height: 100%;
+      }
+
+      .campaign-grid,
+      .media-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .campaign-card {
+        min-height: 185px;
+        padding: 14px;
+      }
+
+      .campaign-card h3 {
+        font-size: 1.15rem;
+      }
+
+      .campaign-card p {
+        line-height: 1.4;
+      }
+
+      .campaign-card button {
+        padding: 8px;
+      }
+
+      .media-card {
+        min-height: 190px;
+        padding: 14px;
+      }
+
+      .media-card strong {
+        font-size: 1.1rem;
+      }
+
+      .gallery-section {
+        padding-top: 0;
+      }
+
+      .gallery-grid {
+        gap: 10px;
+      }
+
+      .gallery-item:nth-child(2) {
+        margin-top: 38px;
+      }
+
+      .gallery-item img {
+        height: 72vw;
+      }
+
+      .gallery-item:nth-child(2) img {
+        height: 60vw;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#home" aria-label="Saishri Prabhakaran, home">
+        <span class="brand-mark" aria-hidden="true">SP</span>
+        <span class="brand-name">Saishri Prabhakaran<span class="brand-caption">Actor · Artist</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#story">Her story</a>
+        <a href="#work">Screen work</a>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#media">Watch</a>
+        <a class="nav-contact" href="#connect">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="shell hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Actor · Model · Classical dancer</p>
+        <h1 id="hero-title">Saishri <span>Prabhakaran</span></h1>
+        <p class="hero-intro">A curious mind. A searching artist. Stories that stay with you.</p>
+        <div class="hero-actions">
+          <a class="button" href="#work">Explore her work <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="text-link" href="#story">Get to know her <span class="arrow" aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="images/29.jpeg" alt="Saishri Prabhakaran in an embroidered pale blue ensemble">
+        <span class="hero-stamp">Chennai · Tamil Nadu</span>
+      </div>
+      <span class="scroll-note" aria-hidden="true">Scroll to explore</span>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Stories with soul</span><span class="dot">✳</span><span>Tamil & Kannada cinema</span><span class="dot">✳</span><span>Curiosity in every character</span><span class="dot">✳</span><span>Stories with soul</span><span class="dot">✳</span><span>Tamil & Kannada cinema</span><span class="dot">✳</span><span>Curiosity in every character</span><span class="dot">✳</span>
+      </div>
+    </div>
+
+    <section class="shell section" id="story" aria-labelledby="story-title">
+      <div class="story">
+        <div class="story-aside">
+          <p class="eyebrow">A little about her</p>
+          <h2 id="story-title">A life of <em>many acts.</em></h2>
+          <img src="images/30.jpeg" alt="Saishri Prabhakaran smiling in a pale blue embroidered outfit" loading="lazy">
+        </div>
+        <div class="story-copy">
+          <p>Saishri Prabhakaran moves between two worlds that have always belonged together: the precision of a curious mind and the openness of an artist. Born Bhuvaneswari in Pudukkottai, Tamil Nadu, she made Chennai home as her path led from research to the screen.</p>
+          <p>A master's graduate and doctoral researcher at IIT Madras, Saishri found another way to study people and the stories they carry: film. Campus electives in film studies and filmmaking opened a door; training in character acting, Bharatanatyam and modeling helped her walk through it.</p>
+          <p>She first built her screen presence in ensemble and character roles, then stepped into a demanding lead performance in the psychological drama <i>Maria</i>. Today, she works across Tamil and Kannada cinema, independent films and advertising—drawn to characters with emotional depth and stories that linger.</p>
+          <div class="detail-grid" aria-label="Profile highlights">
+            <div class="detail"><strong>IIT Madras</strong><span>Master's graduate · PhD researcher</span></div>
+            <div class="detail"><strong>Tamil & Kannada</strong><span>Screen languages</span></div>
+            <div class="detail"><strong>Acting · Dance · Modeling</strong><span>Creative practice</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="films-section section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected screen work</p>
+            <h2 id="work-title">Stories <em>on screen.</em></h2>
+          </div>
+          <p>From intimate family dramas to bold psychological cinema, each role opens a different door.</p>
+        </div>
+        <div class="films-grid">
+          <article class="film-card">
+            <div class="film-meta"><span>2022 · Tamil</span><span>01</span></div>
+            <h3>Hey Sinamika</h3>
+            <p>Character role · Directed by Brinda</p>
+            <div class="film-extra"><span>Romantic comedy</span><span>Jio Studios</span></div>
+          </article>
+          <article class="film-card">
+            <div class="film-meta"><span>2022 · Tamil</span><span>02</span></div>
+            <h3>Natchathiram Nagargiradhu</h3>
+            <p>Supporting role · Directed by Pa. Ranjith</p>
+            <div class="film-extra"><span>Ensemble drama</span><span>Neelam Productions</span></div>
+          </article>
+          <article class="film-card">
+            <div class="film-meta"><span>2023 · Tamil</span><span>03</span></div>
+            <h3>Rangoli</h3>
+            <p>Kaaliyammaal · Directed by Vaali Mohan Das</p>
+            <div class="film-extra"><span>Family drama</span><a href="https://www.youtube.com/watch?v=XblAI2GpJ_k" target="_blank" rel="noopener noreferrer">Hindi-dubbed film ↗</a></div>
+          </article>
+          <article class="film-card">
+            <div class="film-meta"><span>2023 · Kannada</span><span>04</span></div>
+            <h3>Judgement</h3>
+            <p>Female lead · CBFC certified</p>
+            <div class="film-extra"><span>Kannada feature</span><span>Female lead</span></div>
+          </article>
+          <article class="film-card">
+            <div class="film-meta"><span>2024 · Tamil</span><span>05</span></div>
+            <h3>Indian 2</h3>
+            <p>Character role · Directed by S. Shankar</p>
+            <div class="film-extra"><span>Political action</span><span>Lyca Productions</span></div>
+          </article>
+          <article class="film-card">
+            <div class="film-meta"><span>2025 · Tamil</span><span>06</span></div>
+            <h3>Maria</h3>
+            <p>Maria · Titular lead · Directed by Hari K. Sudhan</p>
+            <div class="film-extra"><span>Psychological drama</span><a href="#maria-feature">Discover the film ↓</a></div>
+          </article>
+        </div>
+        <p class="film-note">She has also been cast in a second, as-yet-untitled Kannada feature. Streaming availability varies by region.</p>
+
+        <article class="maria-feature" id="maria-feature">
+          <div class="maria-image">
+            <img src="images/30.jpeg" alt="Saishri Prabhakaran in a quiet, reflective moment" loading="lazy">
+          </div>
+          <div class="maria-copy">
+            <p class="eyebrow">A defining performance · 2025</p>
+            <h3><i>Maria</i></h3>
+            <p>Her first lead role places Saishri at the heart of a psychological drama about faith, desire and the search for freedom. Told through Maria's point of view, the film follows a nun confronting a profound spiritual and psychological crisis.</p>
+            <p class="maria-release-note">After screenings at the Maharaja, Coliseum International and Kalakari film festivals, <i>Maria</i> arrived in cinemas on 3 October 2025.</p>
+            <div class="maria-facts"><span>Directed by Hari K. Sudhan</span><span>With Pavel Navageethan</span><span>First lead role</span></div>
+            <div class="maria-links">
+              <a class="text-link" href="https://www.youtube.com/watch?v=cYk5CEiz_aI" target="_blank" rel="noopener noreferrer">Watch the trailer <span class="arrow" aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://www.youtube.com/watch?v=9-Ng2oTnc58" target="_blank" rel="noopener noreferrer">See a sneak peek <span class="arrow" aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://simplysouth.tv/en/star/saishri-prabhakaran" target="_blank" rel="noopener noreferrer">Find her on Simply South <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="campaigns-section section" id="campaigns" aria-labelledby="campaigns-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">On camera, beyond cinema</p>
+            <h2 id="campaigns-title">A face for <em>every story.</em></h2>
+          </div>
+          <p>Saishri's commercial work spans everyday Tamil life, thoughtful campaigns and familiar brands.</p>
+        </div>
+        <article class="campaign-feature">
+          <div class="campaign-feature-copy">
+            <p class="eyebrow">Featured campaign</p>
+            <h3>Tata Tea Chakra Gold</h3>
+            <p><i>Tea for Tamilians</i> celebrates the care, ritual and cultural values woven into everyday life. A campaign created by Mullen Lintas Bangalore.</p>
+            <div class="campaign-feature-links">
+              <button type="button" data-video-id="46JSMgCD-eM" data-video-title="Tata Tea Chakra Gold — Tea for Tamilians">Campaign film 01 <span aria-hidden="true">▶</span></button>
+              <button type="button" data-video-id="o_dPYLzPtkc" data-video-title="Tata Tea Chakra Gold — Tea for Tamilians">Campaign film 02 <span aria-hidden="true">▶</span></button>
+              <button type="button" data-video-id="bgQ8EuxsnNY" data-video-title="Tata Tea Chakra Gold Care — Tamizh Way">Chakra Gold Care <span aria-hidden="true">▶</span></button>
+              <button type="button" data-video-id="_vfPT7hfcVU" data-video-title="Tata Tea Chakra Gold — The Tea for Tamilians">Heritage cut 01 <span aria-hidden="true">▶</span></button>
+              <button type="button" data-video-id="PiUWco_75cI" data-video-title="Tata Tea Chakra Gold — The Tea for Tamilians">Heritage cut 02 <span aria-hidden="true">▶</span></button>
+            </div>
+          </div>
+          <div class="campaign-feature-visual">
+            <img src="images/29.jpeg" alt="" loading="lazy">
+          </div>
+        </article>
+        <div class="campaign-grid">
+          <article class="campaign-card">
+            <span>Retail · Tamil Nadu</span>
+            <h3>Girias</h3>
+            <p>Summer Sale TV advertisement · Eskimo Advertising Factory</p>
+            <button type="button" data-video-id="gNELUYy9n7c" data-video-title="Girias Summer Sale — TV advertisement">Watch campaign <span aria-hidden="true">▶</span></button>
+          </article>
+          <article class="campaign-card">
+            <span>Consumer electronics</span>
+            <h3>Sathya Agencies</h3>
+            <p>AC & smartwatch offer · Marlia Ads, directed by Sadiq</p>
+            <button type="button" data-video-id="_X_CrrQ_2Zc" data-video-title="Sathya Agencies — AC Smartwatch Offer">Watch campaign <span aria-hidden="true">▶</span></button>
+          </article>
+          <article class="campaign-card">
+            <span>Real estate</span>
+            <h3>Jones Foundations</h3>
+            <p>Plots, apartments & villas launch · Eskimo Advertising Factory</p>
+            <button type="button" data-video-id="iPXn8A2Jh54" data-video-title="Jones Foundations — TV advertisement">Watch campaign <span aria-hidden="true">▶</span></button>
+          </article>
+          <article class="campaign-card">
+            <span>Student safety</span>
+            <h3>Prime Safe</h3>
+            <p>Student tracking device · Eskimo Advertising with Som Shekar</p>
+            <button type="button" data-video-id="oEoKKhQfYEI" data-video-title="Prime Safe — Student Safety Tracking Device">Watch campaign <span aria-hidden="true">▶</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-section section" id="media" aria-labelledby="media-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Interviews · trailers · appearances</p>
+            <h2 id="media-title">A little more <em>Saishri.</em></h2>
+          </div>
+          <p>Conversations about the craft, glimpses from set, and moments from the journey so far.</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filter videos">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="film" aria-pressed="false">Film</button>
+          <button class="filter-button" type="button" data-filter="conversation" aria-pressed="false">Conversations</button>
+          <button class="filter-button" type="button" data-filter="appearance" aria-pressed="false">Appearances</button>
+        </div>
+        <div class="media-grid">
+          <button class="media-card" type="button" data-category="conversation" data-video-id="SEDz-4R92Jw" data-video-title="V Play — Saishri Prabhakaran interview">
+            <span class="media-card-top"><span>V Play · Interview</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>Stories, choices & a dream collaboration</strong>
+            <small>A personal conversation about her career and the director she hopes to work with.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="JXiMs6t-T0U" data-video-title="Jaya TV — Virunthinar Pakkam">
+            <span class="media-card-top"><span>Jaya TV · Interview</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>Virunthinar Pakkam</strong>
+            <small>A broadcast conversation on preparing for a challenging role.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="ajsHDEmCNO0" data-video-title="Jaya TV — Naan Enakkaga Padam Pannala">
+            <span class="media-card-top"><span>Jaya TV · Short</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>Choosing a story for its truth</strong>
+            <small>A short reflection on saying yes to <i>Maria</i>.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="yj_sdSaWfZ8" data-video-title="Cinema Vikatan — Maria team interview">
+            <span class="media-card-top"><span>Cinema Vikatan · Roundtable</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>Inside the world of <i>Maria</i></strong>
+            <small>Saishri in conversation with co-star Pavel Navageethan and the team.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="gqVLL9m25hE" data-video-title="OpenMic Tamil — Maria press meet">
+            <span class="media-card-top"><span>OpenMic Tamil · Press meet</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong><i>Maria</i> press meet</strong>
+            <small>A gathering with the cast and crew ahead of the film's release.</small>
+          </button>
+          <button class="media-card" type="button" data-category="film" data-video-id="cYk5CEiz_aI" data-video-title="Maria — Official theatrical trailer">
+            <span class="media-card-top"><span>Maria · Trailer</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>The official trailer</strong>
+            <small>Step into Hari K. Sudhan's psychological drama.</small>
+          </button>
+          <button class="media-card" type="button" data-category="film" data-video-id="9-Ng2oTnc58" data-video-title="Maria — Official sneak peek">
+            <span class="media-card-top"><span>Maria · Sneak peek</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>A first look at the film</strong>
+            <small>A scene with Saishri and Pavel Navageethan.</small>
+          </button>
+          <button class="media-card" type="button" data-category="film" data-video-id="HS3U2fm8mmc" data-video-title="Maria — Sneak peek scene">
+            <span class="media-card-top"><span>Moviebuff Tamil · Scene</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>A moment from <i>Maria</i></strong>
+            <small>A second look inside the film's world.</small>
+          </button>
+          <button class="media-card" type="button" data-category="film" data-video-id="JOGDoyPC_RA" data-video-title="Maria — ShortFlix streaming promo">
+            <span class="media-card-top"><span>ShortFlix · Streaming</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong><i>Maria</i> on ShortFlix</strong>
+            <small>A promo for the film's streaming release.</small>
+          </button>
+          <button class="media-card" type="button" data-category="film" data-video-id="qEUqhmGwfIs" data-video-title="Kaathalin Kaathali — Tamil short film">
+            <span class="media-card-top"><span>Independent · Short film</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong><i>Kaathalin Kaathali</i></strong>
+            <small>A 2023 Tamil short film directed by IruthayaRaja.</small>
+          </button>
+          <button class="media-card" type="button" data-category="film" data-video-id="XblAI2GpJ_k" data-video-title="Rangoli — Hindi-dubbed feature">
+            <span class="media-card-top"><span>Rangoli · Feature film</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong><i>Rangoli</i> in Hindi</strong>
+            <small>The Hindi-dubbed feature film.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="WG6pl0I-vtU" data-video-title="KaKis Talkies — Maria review">
+            <span class="media-card-top"><span>KaKis Talkies · Review</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>A critic's take on <i>Maria</i></strong>
+            <small>Film review and conversation.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="N-d8TCWQ250" data-video-title="Box of Tamil Talks — Maria public review">
+            <span class="media-card-top"><span>Box of Tamil Talks · Review</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>Audience voices</strong>
+            <small>Public review and discussion of <i>Maria</i>.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="Jckbhs8m-rY" data-video-title="GemCinemas — Maria audience reactions">
+            <span class="media-card-top"><span>GemCinemas · Reactions</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>After the screening</strong>
+            <small>Audience reactions to <i>Maria</i>.</small>
+          </button>
+          <button class="media-card" type="button" data-category="conversation" data-video-id="alGLuwVd4TM" data-video-title="96 TV Cinema News — Maria celebrity review">
+            <span class="media-card-top"><span>96 TV · Celebrity review</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>At the <i>Maria</i> screening</strong>
+            <small>Saishri and the team share their thoughts at the premiere.</small>
+          </button>
+          <button class="media-card" type="button" data-category="appearance" data-video-id="-14Z5Ydl6Bc" data-video-title="Saishri Prabhakaran — Maria press meet short">
+            <span class="media-card-top"><span>Chennai Timepass · Short</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>A press-meet moment</strong>
+            <small>A short clip from the <i>Maria</i> event.</small>
+          </button>
+          <button class="media-card" type="button" data-category="appearance" data-video-id="uUMNcIGLsAI" data-video-title="Vibrance — Student induction programme">
+            <span class="media-card-top"><span>Dr. M.G.R. University · Guest</span><span class="play-mark" aria-hidden="true">▶</span></span>
+            <strong>Sharing the journey</strong>
+            <small>Saishri joins students at the Vibrance induction programme.</small>
+          </button>
+          <a class="media-card" data-category="conversation" href="https://www.cinemaexpress.com/tamil/videos/2025/Oct/01/maria-team-interview-pavel-navageethan-saishri-prabhakaran-hari-k-sudhan" target="_blank" rel="noopener noreferrer">
+            <span class="media-card-top"><span>Cinema Express · Interview</span><span class="play-mark" aria-hidden="true">↗</span></span>
+            <strong>The <i>Maria</i> team in conversation</strong>
+            <small>Saishri, Pavel Navageethan and director Hari K. Sudhan.</small>
+          </a>
+        </div>
+        <p class="media-outro">Her screen credits and film news: <a class="text-link" href="https://www.cinemaexpress.com/topic/saishri-prabhakaran" target="_blank" rel="noopener noreferrer">Cinema Express ↗</a> <a class="text-link" href="https://in.bookmyshow.com/person/saishri-prabhakaran/2030306" target="_blank" rel="noopener noreferrer">BookMyShow ↗</a> <a class="text-link" href="https://matchmytalent.com/saishri-prabhakaran622actor" target="_blank" rel="noopener noreferrer">Match My Talent ↗</a></p>
+      </div>
+    </section>
+
+    <section class="shell section gallery-section" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Off camera</p>
+          <h2 id="gallery-title">A quieter <em>moment.</em></h2>
+        </div>
+        <p>A glimpse between scenes. Select a photograph to view it full-size.</p>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-item" type="button" data-image="images/29.jpeg" data-image-alt="Saishri Prabhakaran looking away in a pale blue embroidered ensemble">
+          <img src="images/29.jpeg" alt="Saishri Prabhakaran in a pale blue embroidered outfit against a stone backdrop" loading="lazy">
+          <span>Portrait · Saishri Prabhakaran</span>
+        </button>
+        <button class="gallery-item" type="button" data-image="images/30.jpeg" data-image-alt="Saishri Prabhakaran smiling in a pale blue embroidered ensemble">
+          <img src="images/30.jpeg" alt="Saishri Prabhakaran smiling in a pale blue embroidered outfit" loading="lazy">
+          <span>Portrait · A moment of light</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="connect-section" id="connect" aria-labelledby="connect-title">
+      <div class="shell">
+        <p class="eyebrow">For work & conversations</p>
+        <h2 id="connect-title">Let's make something <em>meaningful.</em></h2>
+        <p>For collaborations, projects and professional enquiries.</p>
+        <a class="button" href="https://www.instagram.com/saishriprabhakaran/" target="_blank" rel="noopener noreferrer">Connect on Instagram <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span id="year">2026</span> Saishri Prabhakaran · Actor & Artist</p>
+      <a href="https://www.instagram.com/saishriprabhakaran/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    </div>
+  </footer>
+
+  <dialog class="video-dialog" aria-label="Video preview">
+    <div class="dialog-top">
+      <p id="video-title"></p>
+      <button class="dialog-close" type="button" aria-label="Close video">×</button>
+    </div>
+    <div class="video-frame"></div>
+  </dialog>
+
+  <dialog class="image-dialog" aria-label="Photograph preview">
+    <div class="dialog-top">
+      <p id="image-title">Saishri Prabhakaran</p>
+      <button class="dialog-close" type="button" aria-label="Close photograph">×</button>
+    </div>
+    <img src="" alt="">
+  </dialog>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      mainNav.classList.toggle("is-open", !isOpen);
+    });
+
+    mainNav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        mainNav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
+    });
+
+    const videoDialog = document.querySelector(".video-dialog");
+    const videoFrame = videoDialog.querySelector(".video-frame");
+    const videoTitle = document.querySelector("#video-title");
+
+    document.querySelectorAll("[data-video-id]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const videoId = trigger.dataset.videoId;
+        if (!videoId) return;
+
+        videoTitle.textContent = trigger.dataset.videoTitle || "Saishri Prabhakaran";
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`;
+        iframe.title = videoTitle.textContent;
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
+        videoFrame.replaceChildren(iframe);
+        videoDialog.showModal();
+        videoDialog.querySelector(".dialog-close").focus();
+        document.body.classList.add("no-scroll");
+      });
+    });
+
+    const imageDialog = document.querySelector(".image-dialog");
+    const previewImage = imageDialog.querySelector("img");
+
+    document.querySelectorAll("[data-image]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        previewImage.src = trigger.dataset.image;
+        previewImage.alt = trigger.dataset.imageAlt || "";
+        imageDialog.showModal();
+        imageDialog.querySelector(".dialog-close").focus();
+        document.body.classList.add("no-scroll");
+      });
+    });
+
+    document.querySelectorAll("dialog").forEach((dialog) => {
+      const closeButton = dialog.querySelector(".dialog-close");
+      const closeDialog = () => {
+        dialog.close();
+        if (dialog === videoDialog) videoFrame.replaceChildren();
+        if (dialog === imageDialog) previewImage.removeAttribute("src");
+        document.body.classList.remove("no-scroll");
+      };
+
+      closeButton.addEventListener("click", closeDialog);
+      dialog.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          event.preventDefault();
+          closeDialog();
+        }
+      });
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) closeDialog();
+      });
+      dialog.addEventListener("cancel", () => {
+        if (dialog === videoDialog) videoFrame.replaceChildren();
+        if (dialog === imageDialog) previewImage.removeAttribute("src");
+        document.body.classList.remove("no-scroll");
+      });
+    });
+
+    document.querySelectorAll(".filter-button").forEach((filterButton) => {
+      filterButton.addEventListener("click", () => {
+        const filter = filterButton.dataset.filter;
+        document.querySelectorAll(".filter-button").forEach((button) => {
+          button.setAttribute("aria-pressed", String(button === filterButton));
+        });
+        document.querySelectorAll(".media-card").forEach((card) => {
+          card.hidden = filter !== "all" && card.dataset.category !== filter;
+        });
+      });
+    });
+
+    document.querySelector("#year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
